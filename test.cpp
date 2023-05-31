@@ -2,15 +2,14 @@
 
 using namespace std;
 
-string s;
+string s, s2;
 
 int main()
 {
-    s = "hello world\n";
+    cin >> s >> s2;
 
-    string s2 = s.substr(s.size() - 1, 5);
-
-    cout << s2;
+    cout << s << "\n";
+    cout << s2 << "\n";
 
     return 0;
 }
