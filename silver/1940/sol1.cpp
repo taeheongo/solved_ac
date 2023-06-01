@@ -16,6 +16,11 @@ int main()
 {
     cin >> n >> m;
 
+    if (m > 200000)
+    {
+        cout << 0 << "\n";
+    } // 시간초과가 타이트할 경우
+
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
