@@ -1,3 +1,9 @@
+/*
+    submission : https://www.acmicpc.net/source/61869528
+
+    구현 방식만 쪼금 다름.
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
