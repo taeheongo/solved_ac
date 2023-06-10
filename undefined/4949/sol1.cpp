@@ -1,3 +1,9 @@
+/*
+    submission : https://www.acmicpc.net/source/61933539
+
+    스택
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
