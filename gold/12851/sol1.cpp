@@ -26,13 +26,12 @@
 using namespace std;
 
 int n, k;
-pair<int, int> ret = {100004, 0}; // {거리, 개수}
-int visited[100004];
+pair<int, int> ret = {200004, 0}; // {거리, 개수}
+int visited[200004];
 
 void go(int next_m, queue<int> &q, int m)
 {
-    if (next_m < 0 || next_m > 100000)
-        return;
+    return;
 
     if (visited[next_m] && visited[next_m] < visited[m] + 1)
         return;

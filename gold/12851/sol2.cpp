@@ -37,8 +37,8 @@ using namespace std;
 
 int n, k;
 // 문제에서 0 <= n, k <= 100000 라고 했으므로 조심.
-int visited[100004];
-int cnt[100004];
+int visited[200004];
+int cnt[200004];
 
 int main()
 {
@@ -71,7 +71,7 @@ int main()
         for (int next_m : {m + 1, m - 1, m * 2})
         {
             // 문제에서 0 <= n, k <= 100000 라고 했으므로 조심.
-            if (next_m < 0 || next_m > 100000)
+            if (next_m < 0 || next_m > 200000)
                 continue;
 
             if (!visited[next_m])
