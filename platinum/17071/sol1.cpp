@@ -1,5 +1,5 @@
 /*
-    submission : https://www.acmicpc.net/status?user_id=sadness1764&problem_id=17071&from_mine=1
+    submission : https://www.acmicpc.net/source/62375305
 
     time: O(3^N)
 
