@@ -1,10 +1,9 @@
 /*
-    submission : https://www.acmicpc.net/source/62775007
+    submission : https://www.acmicpc.net/source/62775516
 
     time: O(3^26)
 
-    문제에서 같은 알파벳은 다시 갈 수 없다고 명시 되어있기 때문에
-    2차원 배열 visited가 아니라 26개의 1차원 배열인 알파벳 배열로만 체크하면 됨.
+    solution 2에서 dfs에 매개변수로 alp를 넘겨주면 원복부분을 할 필요가 없음.
 */
 #include <bits/stdc++.h>
 
@@ -16,13 +15,11 @@ const int max_n = 20;
 const int dy[4] = {0, 1, 0, -1};
 const int dx[4] = {-1, 0, 1, 0};
 
-bool alp[26];
 char a[max_n + 4][max_n + 4];
 
-int dfs(int y, int x)
+int dfs(int y, int x, int alp)
 {
     // cout << y << ", " << x << "\n"; // 디버그 코드
-    alp[a[y][x] - 'A'] = 1;
 
     int cnt = 0;
     for (int i = 0; i < 4; i++)
@@ -33,13 +30,11 @@ int dfs(int y, int x)
         if (ny < 0 || ny >= r || nx < 0 || nx >= c)
             continue;
 
-        if (alp[a[ny][nx] - 'A'])
+        if (alp & (1 << (int)(a[ny][nx] - 'A')))
             continue;
-
-        cnt = max(cnt, dfs(ny, nx));
+        int tmp = (1 << (int)(a[ny][nx] - 'A'));
+        cnt = max(cnt, dfs(ny, nx, alp | tmp));
     }
-
-    alp[a[y][x] - 'A'] = 0;
 
     return cnt + 1;
 }
@@ -60,7 +55,7 @@ int main()
         }
     }
 
-    cout << dfs(0, 0) << "\n";
+    cout << dfs(0, 0, 1 << (int)(a[0][0] - 'A')) << "\n";
 
     return 0;
 }
