@@ -8,7 +8,7 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    // i번째 비트 xor
+    // i번째 비트 xor (toggle)
     int s = 18; // 0001 0010
     int i = 0;
     s ^= 1 << i;

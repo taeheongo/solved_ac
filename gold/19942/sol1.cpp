@@ -1,5 +1,5 @@
 /*
-    submission : https://www.acmicpc.net/source/62667223
+    submission : https://www.acmicpc.net/source/63718001
 
     time    : O(n * 2^n + klogk) =O(n * 2^n)          (3<= n <= 15, 0<= k <= 2^n)
     최대 시간 : n * 2^n + n * 2^n
