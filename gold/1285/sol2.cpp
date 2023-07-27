@@ -33,8 +33,10 @@ void go(int idx)
         {
             int cnt = 0;
             for (int j = 1; j <= n; j++)
+            {
                 if (a[j] & i)
                     cnt++;
+            }
             sum += min(cnt, n - cnt);
         }
         ret = min(sum, ret);

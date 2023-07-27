@@ -2,20 +2,19 @@
     submission : https://www.acmicpc.net/source/62769208
 
     time: O(n * 2^n) (2 <= n <= 10)
+        => 조합의 개수 2^n 각각의 개수에 대해서 순회 n
 
     n개의 원소를 2개의 connected component로 나누어야 하고,
     그 두 connected component의 인구수의 차의 최소를 구하는 문제
 
-    2개의 connected component를 구하는 부분이 인상적인데
-    n = 6이라면
-    조합으로 nC2 nC3 + nC4 + nC5를 구해야한다.
-    조합으로 뽑는 부분.
+    2개의 connected component로 나누는 부분.
+    조합 : nC2 + nC3 + ... + nC5
     for (int i = 1; i < (1 << n) - 1; i++)
     {
         ...
     }
 
-    어떤 수들을 뽑았는지 확인하기.
+    어떤 수들을 뽑았는지 확인하는 부분
     for (int j = 0; j < n; j++)
     {
         if (i & (1 << j)){
@@ -85,6 +84,7 @@ int main()
     {
         fill(&visited[0], &visited[0] + max_n, 0);
         fill(&color[0], &color[0] + max_n, 0);
+
         for (int j = 0; j < n; j++)
         {
             if (i & (1 << j))
