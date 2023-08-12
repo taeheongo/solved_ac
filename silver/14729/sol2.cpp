@@ -3,6 +3,8 @@
 
     time: (log1 + log2 + ... + logN)
             <= NlogN
+
+    힙을 사용한 풀이.
 */
 #include <bits/stdc++.h>
 
