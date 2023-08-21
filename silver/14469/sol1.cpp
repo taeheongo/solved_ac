@@ -1,7 +1,6 @@
 /*
     submission : https://www.acmicpc.net/source/65378081
 
-
     time : O(N)
 */
 
