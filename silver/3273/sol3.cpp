@@ -1,5 +1,5 @@
 /*
-    submission : https://www.acmicpc.net/source/64983439
+    submission : https://www.acmicpc.net/source/65460745
 
     time: O(NlogN)
 
@@ -33,9 +33,10 @@ int main()
     {
         if (a[l] + a[r] == x)
         {
-            cout << a[l] << ", " << a[r] << "\n";
+            // cout << a[l] << ", " << a[r] << "\n";
             ret++;
             r--;
+            l++;
         }
         else if (a[l] + a[r] < x)
         {
