@@ -1,3 +1,11 @@
+/*
+  submission : https://www.acmicpc.net/source/66482328
+
+  time : O(4^n)
+
+  백트랙킹 + 구현
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
