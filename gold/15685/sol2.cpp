@@ -1,5 +1,5 @@
 /*
-    submission : https://www.acmicpc.net/source/67175897
+    submission : https://www.acmicpc.net/source/67176481
 
     먼저 4방향의 0~10세대별 방향을 구한다.
 */
